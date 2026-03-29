@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: hemanthuser/wanderlust-backend-beta:1
+          image: hemanthuser/wanderlust-backend-beta:2
           ports:
             - containerPort: 8080
 ---
