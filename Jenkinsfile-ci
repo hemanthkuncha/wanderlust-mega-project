@@ -82,7 +82,7 @@ pipeline {
     post{
         success{
             archiveArtifacts artifacts: '*.xml', followSymlinks: false
-            build job: "Wanderlust-CD", parameters: [
+            build job: "wanderlust-cd", parameters: [
                 string(name: 'FRONTEND_DOCKER_TAG', value: "$BUILD_NUMBER"),
                 string(name: 'BACKEND_DOCKER_TAG', value: "$BUILD_NUMBER")
             ]
