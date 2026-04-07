@@ -36,7 +36,6 @@ pipeline {
             }
         }
         
-        
         stage("Update: Kubernetes manifests"){
             steps{
                 script{
@@ -59,7 +58,7 @@ pipeline {
         stage("Git: Code update and push to GitHub"){
             steps{
                 script{
-                    withCredentials([gitUsernamePassword(credentialsId: 'git-creds', gitToolName: 'giT')]) {
+                    withCredentials([gitUsernamePassword(credentialsId: 'git-creds', gitToolName: 'git')]) {
                         sh '''
                         echo "Checking repository status: "
                         git status
@@ -82,6 +81,7 @@ pipeline {
             }
         }
     }
+    
   post {
         always {
             script {
