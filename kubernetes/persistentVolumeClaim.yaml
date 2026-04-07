@@ -4,9 +4,9 @@ metadata:
   name: mongo-pvc
   namespace: wanderlust
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
-  storageClassName: ""
   resources:
     requests:
       storage: 5Gi
