@@ -9,6 +9,8 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
+  storageClassName: manual
   persistentVolumeReclaimPolicy: Delete
   hostPath:
     path: /data/wanderlust/db
+    type: DirectoryOrCreate    
